@@ -15,7 +15,7 @@ public class School {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String name;
     private String location;
     private String principalName;
