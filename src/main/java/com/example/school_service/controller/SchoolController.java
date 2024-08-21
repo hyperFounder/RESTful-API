@@ -32,4 +32,21 @@ public class SchoolController {
     public School fetchSchoolById(@PathVariable Long id) {
         return schoolService.fetchSchoolById(id);
     }
+
+    // Update principal name by ID
+    @PutMapping("/{id}/principal-name")
+    public School updatePrincipalName(@PathVariable Long id, @RequestBody String newPrincipalName) {
+        return schoolService.updatePrincipalName(id, newPrincipalName);
+    }
+
+    // Delete a school by ID
+    @DeleteMapping("/{id}")
+    public String deleteSchool(@PathVariable Long id) {
+        boolean isDeleted = schoolService.deleteSchool(id);
+        if (isDeleted) {
+            return "School deleted successfully.";
+        } else {
+            return "School not found.";
+        }
+    }
 }

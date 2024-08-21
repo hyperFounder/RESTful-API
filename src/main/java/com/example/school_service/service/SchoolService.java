@@ -23,4 +23,23 @@ public class SchoolService {
     public School fetchSchoolById(Long id){
         return schoolRepository.findById(id).orElse(null);
     }
+
+    // Update
+    public School updatePrincipalName(Long id, String newPrincipalName) {
+        School school = schoolRepository.findById(id).orElse(null);
+        if (school != null) {
+            school.setPrincipalName(newPrincipalName);
+            return schoolRepository.save(school);
+        }
+        return null;
+    }
+
+    // Delete a school by ID
+    public boolean deleteSchool(Long id) {
+        if (schoolRepository.existsById(id)) {
+            schoolRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }
