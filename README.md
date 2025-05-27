@@ -1,4 +1,4 @@
-## README.md   
+## README.md    
 
 - Please view `application.properties` for the following
   - This API allows clients to perform CRUD operations in a PostgreSQL database running on `localhost:5433`
