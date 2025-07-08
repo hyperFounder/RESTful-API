@@ -1,4 +1,4 @@
-package com.example.school_service.controller;
+package com.example.school_service.controller; 
 
 import com.example.school_service.model.School;
 import com.example.school_service.service.SchoolService;
