@@ -1,4 +1,4 @@
-package com.example.school_service.model;
+package com.example.school_service.model; 
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
